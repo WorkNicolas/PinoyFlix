@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { ResultCard } from "./ResultCard";
+import { ResultCard2 } from "./ResultCard2";
 
-export const Add = () => {
+export const AddA = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
 
@@ -11,8 +11,8 @@ export const Add = () => {
     setQuery(e.target.value);
 
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=7eb09707bd0e63ad344deb00859f4fb3&language=en-US&page=1&include_adult=false&query=${e.target.value}`
-    )
+        `https://api.themoviedb.org/3/search/tv?api_key=7eb09707bd0e63ad344deb00859f4fb3&language=en-US&page=1&include_adult=false&query=${e.target.value}`
+      )
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
@@ -31,7 +31,7 @@ export const Add = () => {
           <div className="input-wrapper">
             <input
               type="text"
-              placeholder="Search for a movie"
+              placeholder="Find TV Show"
               value={query}
               onChange={onChange}
             />
@@ -41,7 +41,7 @@ export const Add = () => {
             <ul className="results">
               {results.map((movie) => (
                 <li key={movie.id}>
-                  <ResultCard movie={movie} />
+                  <ResultCard2 movie={movie} />
                 </li>
               ))}
             </ul>

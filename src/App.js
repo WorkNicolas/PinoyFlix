@@ -4,12 +4,17 @@ import { Header } from "./components/Header";
 import { Watchlist } from "./components/Watchlist";
 import { Watched } from "./components/Watched";
 import { Add } from "./components/Add";
+import { AddA } from "./components/AddA";
+import { AddB } from "./components/AddB";
+
+
 import "./App.css";
 import "./lib/font-awesome/css/all.min.css";
 
 import { GlobalProvider } from "./context/GlobalState";
 
 function App() {
+  
   return (
     <GlobalProvider>
       <Router>
@@ -21,6 +26,12 @@ function App() {
           </Route>
           <Route path="/add">
             <Add />
+          </Route>
+          <Route path="/addA">
+            <AddA />
+          </Route>
+          <Route path="/addB">
+            <AddB />
           </Route>
           <Route path="/watched">
             <Watched />

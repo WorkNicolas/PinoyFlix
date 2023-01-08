@@ -7,7 +7,7 @@ import { Alert } from "bootstrap";
 
 
 
-export const ResultCard = ({ movie }) => {
+export const ResultCard2 = ({ movie }) => {
   const {
     addMovieToWatchlist,
     addMovieToWatched,
@@ -50,9 +50,9 @@ export const ResultCard = ({ movie }) => {
 
       <div className="info">
         <div className="header">
-          <h3 className="title">{movie.title}</h3>
+          <h3 className="title">{movie.name}</h3>
           <h4 className="release-date">
-            <Moment format="YYYY">{movie.release_date}</Moment>
+            <Moment format="YYYY">{movie.first_air_date}</Moment>
           </h4>
         </div>
 
